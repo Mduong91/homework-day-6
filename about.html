@@ -1,49 +1,56 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
 <head>
-	<title>Michael Duong</title>
+    <title>My super fun game about color</title>
 </head>
 <body>
-<style type="text/css">
-	h1{
-		text-align: center;
-		background-color: black;
-		color: white;
-		border: solid;
-		font-family: arial;
-		font-style: bold;
-	}
-	h2{
-		font-style: comic;
-		border: solid;
-		background-position: center;
-	}
-	p {
-		color: purple;
-		font-family: cursive;
-		font-size: 24px;
-	}
-	img {
-		border: dotted;
-		text-align: center;
-	}
-</style>
+    <h1>Our Guessing Game about Color</h1>
+    <img id="myImg" src= />
 
-	<h1>About Michael Duong</h1>
-	<h2>Biography</h2>
-	<p>Stuff about me 1</p>
-	<h2>Hobbies</h2>
-	<p>I Like to do stuff</p>
-	<ul>this is the stuff I like to do
-		<li>pictures of dogs</li>
-		<li>cook food</li>
-		<li>lift breh</li>
-			<ol>
-			<li>power clean</li>
-			<li>front squat</li>
-			</ol>
-	</ul>
-	<h2>Picture of dog</h2>
-	<img src="http://www.dogbreedplus.com/dog_breeds/images/playing-shar-pei-puppies-image.jpg" alt="shar pei" height=500 weight=500>
-</body>
-</html>
+    <script type="text/javascript">
+        var correctNotcorrect = [answer, guess]
+        var answer = "purple"; 
+        var guess = prompt("What is computer's favorite color? red, blue, green, or purple?");
+        for (var i=0; i<3; i++) { //this here means you only have 4 chances
+
+            if (guess.toLowerCase() === answer) {
+                alert("you win, it's purple!");
+                document.getElementById("myImg").src = "http://s7d5.scene7.com/is/image/WAR/swatch_1_color?$swatch$&$color1=7E0B80";
+                break;
+            }
+
+            else if (guess.toLowerCase() === "red") {
+                document.getElementById("myImg").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Red.svg/200px-Red.svg.png";
+                alert("no, its not red, try again");
+                
+                guess = prompt("please try again, blue, green, or purple?")}
+            else if (guess.toLowerCase() === "blue") {
+                 document.getElementById("myImg").src = "https://twibbon.s3.amazonaws.com/2012/82/d78470a4-3812-4faf-bfc8-e525d02378d1.png";
+                alert("no, its not blue, try again");
+               
+                guess = prompt("please try again, red, green, or purple?")}
+            else if (guess.toLowerCase() === "green") {
+                document.getElementById("myImg").src = "https://upload.wikimedia.org/wikipedia/commons/c/c7/Solid_green.png";
+                alert("no, its not green, try again");
+
+                guess = prompt("please try again, blue, red, or purple?")}
+            else {
+                alert("no, that wasn't even a choice!, try again");
+                guess = prompt("What is computer's favorite color? red, blue, green, or purple?");}
+
+        }
+
+
+
+        // two equal signs means something else than 1 equal sign
+        // = assigning a value || == means asking if they are equal or 
+        // if and else needs to have their own curly brackets and the their own code inside.
+
+    </script>
+    <style type="text/css">
+
+    h1 {
+        color: purple; 
+    }
+
+    </style>
+</body 
